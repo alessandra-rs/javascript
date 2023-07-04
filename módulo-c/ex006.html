@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div {
+            background: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.querySelector('div#area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        //addEventListener > add os eventos que irá ser feito
+
+        function clicar() {
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerHTML = 'Entrou'
+        }
+        function sair() {
+            a.innerHTML = 'Saiu...'
+            a.style.background = 'green'
+        }
+        //function ação() > p/ dizer o que será feito
+    </script>
+</body>
+</html>
